@@ -9,19 +9,19 @@ salary calculator
 
 technical tasks
 
-[ ] Prodject set up
+[X] Prodject set up
     [X] index.html
     [X] stylesheet
     [X] jquery
     [X] javascript
     [X] doc.ready
-[ ] HTML mockup
-    [ ] form
-        [ ] employee first name
-        [ ] employee last name
-        [ ] ID number
-        [ ] job title
-        [ ] annual salary
+[X] HTML mockup
+    [X] form
+        [X] employee first name
+        [X] employee last name
+        [X] ID number
+        [X] job title
+        [X] annual salary
     [ ] submit button
         [ ] store collected info
         [ ] calculate monthly cost
