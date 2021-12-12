@@ -85,5 +85,6 @@ function clear() {
 function onDeleteEmployee() {
     console.log('in onDeleteEmployee');
     $(this).parents('tr').remove();
-    
+    let deleteEmployee = employeeInfo.indexOf(this);
+    employeeInfo.splice(deleteEmployee, 1);
 }
