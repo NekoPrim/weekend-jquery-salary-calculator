@@ -5,10 +5,6 @@ function readyNow() {
     $(document).on('submit', newEmployee);
 }
 
-function onNewEmployee(event) {
-    event.preventDefault();
-}
-
 let employeeInfo = [];
 
 function newEmployee(event) {
@@ -21,13 +17,31 @@ function newEmployee(event) {
     console.log(first, last, ID, title, salary);
     addNewEmployee(first, last, ID, title, salary);
     clear();
+    $('#employeeList').empty();
+
+    for (let employee of employeeInfo) {
+        $('#employeeList').append(`
+            <tr>
+                <td>${employee.firstName}</td>
+                <td>${employee.lastName}</td>
+                <td>${employee.IDNumber}</td>
+                <td>${employee.title}</td>
+                <td>${employee.salary}</td>
+                <td>
+                    <button class="deleteButton">
+                        Delete
+                    </button>
+                </td>
+            </tr>
+        `)
+    }
 }
 
 function addNewEmployee(nombre, apellio, identificacion, posicion, salario) {
     employee = {
         firstName: nombre, 
         lastName: apellio, 
-        ID: identificacion, 
+        IDNumber: identificacion, 
         title: posicion, 
         salary: salario
     };
