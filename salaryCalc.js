@@ -87,5 +87,12 @@ function onDeleteEmployee() {
     $(this).parents('tr').remove();
 
 
-    $(this).findIndex;
+    let deleteEmployee = $(this).getElementsByClassName('.employeeList').first;
+    for (let employee of employeeInfo) {
+        console.log('in for loop');
+        if (employee.name = deleteEmployee) {
+            employeeInfo.indexOf(employee.name)
+        }
+    }
+    
 }
