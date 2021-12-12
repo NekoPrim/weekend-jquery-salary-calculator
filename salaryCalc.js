@@ -4,6 +4,7 @@ function readyNow() {
     console.log('in readyNow');
     $(document).on('submit', newEmployee);
     $(document).on('click', '.deleteButton', onDeleteEmployee);
+    $('#firstRow').css({'background-color': 'lightskyblue'})
 }
 
 let employeeInfo = [];
@@ -14,15 +15,16 @@ function newEmployee(event) {
 
     let first = $('#firstNameInput').val();
     let last = $('#lastNameInput').val();
-    let ID = Number($('#IDNumberInput').val());
+    let ID = $('#IDNumberInput').val();
     let title = $('#jobTitleInput').val();
-    let salary = Number($('#annualSalaryInput').val());
+    let salary = $('#annualSalaryInput').val();
     console.log(first, last, ID, title, salary);
 
 
     addNewEmployee(first, last, ID, title, salary);
     clear();
 
+    $('#total').empty();
 
     $('#employeeList').empty();
 
@@ -43,6 +45,13 @@ function newEmployee(event) {
             </tr>
         `)
     }
+
+    let totalAnnualSalary = 0;
+    for (let employee of employeeInfo) {
+        totalAnnualSalary += Number(employee.salary);
+    }
+    let totalMonthly = totalAnnualSalary/12;
+    $('#total').append(`Total Monthy: ${totalMonthly}`);
 }
 
 function addNewEmployee(nombre, apellio, identificacion, posicion, salario) {
@@ -68,4 +77,5 @@ function clear() {
 function onDeleteEmployee() {
     console.log('in onDeleteEmployee');
     $(this).parents('tr').remove();
+    
 }
