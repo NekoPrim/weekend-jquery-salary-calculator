@@ -22,11 +22,11 @@ technical tasks
         [X] ID number
         [X] job title
         [X] annual salary
-    [ ] submit button
+    [X] submit button
         [X] store collected info
         [X] clear input fields
-        [ ] calculate monthly cost to DOM
-            [ ] exceeds 20,000 background red
+        [X] calculate monthly cost to DOM
+            [X] exceeds 20,000 background red
         [X] append to table on DOM
     [ ] delete button per employee
         [ ] delete stored info

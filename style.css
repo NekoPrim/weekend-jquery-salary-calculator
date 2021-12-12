@@ -37,3 +37,7 @@ th, td {
 td {
     background-color: aliceblue;
 }
+
+#total {
+    text-align: center;
+}

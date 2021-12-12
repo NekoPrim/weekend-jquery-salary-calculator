@@ -51,7 +51,15 @@ function newEmployee(event) {
         totalAnnualSalary += Number(employee.salary);
     }
     let totalMonthly = totalAnnualSalary/12;
-    $('#total').append(`Total Monthy: ${totalMonthly}`);
+    let monthly = totalMonthly.toFixed(2);
+    $('#total').append('Total Monthly:', monthly);
+
+    if (totalMonthly > 20000) {
+        $('#total').css({
+            'background-color': 'red',
+            'color': 'white'
+        })
+    }
 }
 
 function addNewEmployee(nombre, apellio, identificacion, posicion, salario) {
