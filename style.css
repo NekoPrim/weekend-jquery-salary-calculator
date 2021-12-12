@@ -14,3 +14,8 @@ main {
     margin: 0 auto;
     width: 1000px;
 }
+
+table {
+    text-align: center;
+    width: 100%;
+}

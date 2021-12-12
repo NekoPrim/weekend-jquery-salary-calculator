@@ -23,7 +23,8 @@ technical tasks
         [X] job title
         [X] annual salary
     [ ] submit button
-        [ ] store collected info
+        [X] store collected info
+        [X] clear input fields
         [ ] calculate monthly cost
             [ ] exceeds 20,000 background red
         [ ] append to table on DOM
