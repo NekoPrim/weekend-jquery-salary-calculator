@@ -3,21 +3,29 @@ $(document).ready(readyNow);
 function readyNow() {
     console.log('in readyNow');
     $(document).on('submit', newEmployee);
+    $(document).on('click', '.deleteButton', onDeleteEmployee);
 }
 
 let employeeInfo = [];
 
 function newEmployee(event) {
+
     event.preventDefault();
+
     let first = $('#firstNameInput').val();
     let last = $('#lastNameInput').val();
     let ID = Number($('#IDNumberInput').val());
     let title = $('#jobTitleInput').val();
     let salary = Number($('#annualSalaryInput').val());
     console.log(first, last, ID, title, salary);
+
+
     addNewEmployee(first, last, ID, title, salary);
     clear();
+
+
     $('#employeeList').empty();
+
 
     for (let employee of employeeInfo) {
         $('#employeeList').append(`
@@ -55,4 +63,9 @@ function clear() {
     $('#IDNumberInput').val('');
     $('#jobTitleInput').val('');
     $('#annualSalaryInput').val('');
+}
+
+function onDeleteEmployee() {
+    console.log('in onDeleteEmployee');
+    $(this).parents('tr').remove();
 }
