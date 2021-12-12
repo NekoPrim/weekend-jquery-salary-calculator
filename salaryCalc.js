@@ -36,7 +36,7 @@ function newEmployee(event) {
                 <td>${employee.lastName}</td>
                 <td>${employee.IDNumber}</td>
                 <td>${employee.title}</td>
-                <td>${employee.salary}</td>
+                <td>$${employee.salary}</td>
                 <td>
                     <button class="deleteButton">
                         Delete
@@ -85,5 +85,7 @@ function clear() {
 function onDeleteEmployee() {
     console.log('in onDeleteEmployee');
     $(this).parents('tr').remove();
-    $(this).empty(employeeInfo.employee);
+
+
+    $(this).findIndex;
 }
